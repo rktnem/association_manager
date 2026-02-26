@@ -1,0 +1,11 @@
+.nav-auth {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+.auth-section {
+    display: flex;
+    justify-content: center;
+    padding-top: 54px;
+}

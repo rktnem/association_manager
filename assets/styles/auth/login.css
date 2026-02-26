@@ -1,0 +1,46 @@
+.login-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 16px;
+}
+
+.login-section .login-form,
+.login-section .login-form .field,
+.login-section .login-form .field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-section .login-form {
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 0.75px solid var(--gray-white);
+}
+
+.login-section .login-form .field {
+    gap: 12px;
+}
+.login-section .login-form .field .field-group {
+    gap: 8px;
+}
+.login-section .login-form .field .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.login-section .login-redirect {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+.login-section .login-redirect label {
+    color: var(--gray-medium);
+}
+.login-section .login-redirect a {
+    color: hsla(215, 75%, 50%, 1);
+}
