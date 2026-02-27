@@ -1,0 +1,19 @@
+.nav-auth .nav-controller .register-controller {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 24px;
+    border-radius: 4px;
+    background-color: var(--gray-white);
+    transition: gap 0.25s ease;
+    cursor: pointer;
+}
+.nav-auth .nav-controller .register-controller:hover {
+    gap: 16px;
+}
+
+.auth-container.register-section .auth-form {
+    width: 300px;
+    min-width: 250px;
+    border: none;
+}

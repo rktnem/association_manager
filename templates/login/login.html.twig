@@ -2,13 +2,9 @@
 
 {% block title %}Se connecter{% endblock %}
 
-{% block controller %}
-    <span>Menu controller</span>
-{% endblock %}
-
 {% block body %}
-    <div class="login-section">
-        <form method="post" class="login-form">
+    <div class="auth-container">
+        <form method="post" class="auth-form">
             <div class="feedback">
                 {% if error %}
                     <div class="">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -42,9 +38,9 @@
                 Se connecter
             </button>
         </form>
-        <div class="login-redirect">
+        <div class="auth-redirect">
             <label>Pas encore de compte pour l'association ?</label>
-            <a href="#">Créer le compte</a>
+            <a href={{ url("app_register") }}>Créer le compte</a>
         </div>
     </div>
 {% endblock %}

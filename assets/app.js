@@ -12,5 +12,6 @@ import "./styles/app.css";
  */
 import "./styles/auth/auth.css";
 import "./styles/auth/login.css";
+import "./styles/auth/register.css";
 
 console.log("This log comes from assets/app.js - welcome to AssetMapper! 🎉");

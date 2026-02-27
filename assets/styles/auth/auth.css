@@ -4,8 +4,60 @@
     padding: 16px 24px;
 }
 
+.nav-auth .nav-logo img {
+    width: 48px;
+    height: auto;
+}
+
 .auth-section {
     display: flex;
     justify-content: center;
     padding-top: 54px;
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px 16px;
+}
+
+.auth-container .auth-form,
+.auth-container .auth-form .field,
+.auth-container .auth-form .field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-container .auth-form {
+    gap: 8px;
+    padding-bottom: 16px;
+    border-bottom: 0.75px solid var(--gray-light);
+}
+
+.auth-container .auth-form .field {
+    gap: 12px;
+}
+.auth-container .auth-form .field .field-group {
+    gap: 8px;
+}
+.auth-container .auth-form .field .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 8px;
+    font-size: 12px;
+}
+
+.auth-container .auth-redirect {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+}
+.auth-container .auth-redirect label {
+    color: var(--gray-medium);
+}
+.auth-container .auth-redirect a {
+    color: hsla(215, 75%, 50%, 1);
 }
