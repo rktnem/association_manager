@@ -18,14 +18,20 @@ class RegistrationFormType extends AbstractType
         $builder
             ->add('keypass', TextType::class, [
                 "label" => "Clé d'accés",
+                "attr" => [
+                    "placeholder" => "Entrer votre clé d'accés...",
+                ],
                 "row_attr" => [
                     "class" => "field-group"
                 ]
             ])
             ->add("contact", TextType::class, [
+                "attr" => [
+                    "placeholder" => "Contact de votre association...",
+                ],
                 "row_attr" => [
                     "class" => "field-group"
-                ]
+                ]   
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
@@ -34,17 +40,18 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'attr' => [
                     'autocomplete' => 'new-password',
+                    "placeholder" => "Entrer le mot de passe..."
                 ],
                 "row_attr" => [
                     "class" => "field-group"
                 ],
                 'constraints' => [
                     new NotBlank(
-                        message: 'Please enter a password',
+                        message: 'Veuillez entrer un mot de passe',
                     ),
                     new Length(
                         min: 6,
-                        minMessage: 'Your password should be at least {{ limit }} characters',
+                        minMessage: 'Vous devez au moins avoir {{ limit }} caractères',
                         // max length allowed by Symfony for security reasons
                         max: 4096,
                     ),
@@ -52,6 +59,9 @@ class RegistrationFormType extends AbstractType
             ])
             ->add("confirmPassword", PasswordType::class, [
                 "label" => "Confirmer mot de passe",
+                "attr" => [
+                    "placeholder" => "Confirmer votre mot de passe...",
+                ],
                 "row_attr" => [
                     "class" => "field-group"
                 ],

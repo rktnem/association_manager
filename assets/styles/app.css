@@ -30,6 +30,11 @@ input:not(input[type="checkbox"]) {
 input:focus {
     outline: 2px solid var(--primary-hover);
 }
+input::placeholder {
+    color: var(--gray-medium);
+    opacity: 0.8;
+    font-size: 12px;
+}
 
 /* Class utilities */
 .btn {

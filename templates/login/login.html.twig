@@ -14,21 +14,15 @@
                         <li>Information saisie incorrecte</li>
                     </ul>
                 {% endif %}
-
-                {% if app.user %}
-                    <div class="">
-                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ logout_path() }}">Logout</a>
-                    </div>
-                {% endif %}
             </div>
             <div class="field">
                 <div class="field-group">
                     <label for="username">Clé d'accés</label>
-                    <input type="text" value="{{ last_username }}" name="_username" id="username" autocomplete="username" required autofocus>
+                    <input type="text" value="{{ last_username }}" name="_username" id="username" autocomplete="username" placeholder="Entrer votre clé d'accés..." required autofocus>
                 </div>
                 <div class="field-group">
                     <label for="password">Mot de passe</label>
-                    <input type="password" name="_password" id="password" autocomplete="current-password" required>
+                    <input type="password" name="_password" id="password" autocomplete="current-password" placeholder="Votre mot de passe..." required>
                 </div>
                 <input type="hidden" name="_csrf_token" data-controller="csrf-protection" value="{{ csrf_token('authenticate') }}">
                 <div class="checkbox mb-3">
