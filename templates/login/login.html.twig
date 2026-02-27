@@ -3,11 +3,16 @@
 {% block title %}Se connecter{% endblock %}
 
 {% block body %}
-    <div class="auth-container">
+    <div class="auth-container login-section">
         <form method="post" class="auth-form">
+            <div class="title">
+                <h1>Se connecter</h1>
+            </div>
             <div class="feedback">
                 {% if error %}
-                    <div class="">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                    <ul>
+                        <li>Information saisie incorrecte</li>
+                    </ul>
                 {% endif %}
 
                 {% if app.user %}
@@ -15,9 +20,6 @@
                         You are logged in as {{ app.user.userIdentifier }}, <a href="{{ logout_path() }}">Logout</a>
                     </div>
                 {% endif %}
-            </div>
-            <div class="title">
-                <h1>Se connecter</h1>
             </div>
             <div class="field">
                 <div class="field-group">
@@ -40,7 +42,7 @@
         </form>
         <div class="auth-redirect">
             <label>Pas encore de compte pour l'association ?</label>
-            <a href={{ url("app_register") }}>Créer le compte</a>
+            <a href={{ url("app_register") }} class="link">Créer le compte</a>
         </div>
     </div>
 {% endblock %}

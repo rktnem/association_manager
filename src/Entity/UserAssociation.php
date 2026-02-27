@@ -74,7 +74,7 @@ class UserAssociation implements UserInterface, PasswordAuthenticatedUserInterfa
     {
         $roles = $this->roles;
         // guarantee every user at least has ROLE_USER
-        $roles[] = 'ROLE_USER';
+        $roles[] = 'ADMIN';
 
         return array_unique($roles);
     }

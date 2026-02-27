@@ -16,7 +16,6 @@ class AssociationRepository extends ServiceEntityRepository
         parent::__construct($registry, Association::class);
     }
 
-
 //    /**
 //     * @return Association[] Returns an array of Association objects
 //     */

@@ -64,9 +64,6 @@ class Association
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $keypass = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $password = null;
-
     /**
      * @var Collection<int, Membre>
      */

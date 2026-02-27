@@ -12,7 +12,7 @@
 .auth-section {
     display: flex;
     justify-content: center;
-    padding-top: 54px;
+    padding-top: 28px;
 }
 
 .auth-container {
@@ -41,6 +41,30 @@
 .auth-container .auth-form .field .field-group {
     gap: 8px;
 }
+/* Manage text error */
+.auth-container .auth-form .feedback ul,
+.auth-container .auth-form .field .field-group ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    order: 1;
+}
+.auth-container .auth-form .feedback ul li,
+.auth-container .auth-form .field .field-group ul li {
+    color: var(--text-error);
+    font-size: 12px;
+}
+.auth-container .auth-form .feedback ul {
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background-color: var(--background-error);
+    border-radius: 4px;
+}
+.auth-container .auth-form .feedback ul li {
+    opacity: 0.8;
+    font-size: 14px;
+}
+/* end */
 .auth-container .auth-form .field .checkbox {
     display: flex;
     align-items: center;
