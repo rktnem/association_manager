@@ -11,7 +11,17 @@
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body {{ stimulus_controller("partials/navigation") }}>
+        <nav class="navbar">
+            {{ include("/partials/navbar.html.twig") }}
+        </nav>
+        <div class="wrapper">
+            <aside class="sidebar" {{ stimulus_target("partials/navigation", "sidebar") }}>
+                {{ include("/partials/sidebar.html.twig") }}
+            </aside>
+            <div class="content-wrapper">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
     </body>
 </html>

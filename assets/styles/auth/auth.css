@@ -23,8 +23,7 @@
 }
 
 .auth-container .auth-form,
-.auth-container .auth-form .field,
-.auth-container .auth-form .field-group {
+.auth-container .auth-form .field {
     display: flex;
     flex-direction: column;
 }
@@ -38,19 +37,14 @@
 .auth-container .auth-form .field {
     gap: 12px;
 }
-.auth-container .auth-form .field .field-group {
-    gap: 8px;
-}
 /* Manage text error */
-.auth-container .auth-form .feedback ul,
-.auth-container .auth-form .field .field-group ul {
+.auth-container .auth-form .feedback ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     order: 1;
 }
-.auth-container .auth-form .feedback ul li,
-.auth-container .auth-form .field .field-group ul li {
+.auth-container .auth-form .feedback ul li {
     color: var(--text-error);
     font-size: 12px;
 }

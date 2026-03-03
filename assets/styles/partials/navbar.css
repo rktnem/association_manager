@@ -1,0 +1,30 @@
+.navbar {
+    padding: 12px 16px;
+}
+
+.navbar .nav-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.navbar .nav-title .toggle {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    width: 24px;
+    border-radius: 2px;
+    transition: 0.25s ease;
+}
+.navbar .nav-title .toggle:hover {
+    background-color: var(--gray-light);
+}
+.navbar .nav-title .logo img {
+    width: 45px;
+}
+.navbar .nav-title .title {
+    font-size: 18px;
+}
+.navbar .nav-title .title span {
+    color: var(--gray-medium);
+    font-size: 14px;
+}

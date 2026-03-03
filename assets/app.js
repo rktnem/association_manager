@@ -8,6 +8,12 @@ import "./stimulus_bootstrap.js";
 import "./styles/app.css";
 
 /**
+ * Styles for partials component
+ */
+import "./styles/partials/sidebar.css";
+import "./styles/partials/navbar.css";
+
+/**
  * Styles for the authentication layout
  */
 import "./styles/auth/auth.css";
