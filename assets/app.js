@@ -20,4 +20,9 @@ import "./styles/auth/auth.css";
 import "./styles/auth/login.css";
 import "./styles/auth/register.css";
 
+/**
+ * Styles for association section
+ */
+import "./styles/association/index.css";
+
 console.log("This log comes from assets/app.js - welcome to AssetMapper! 🎉");

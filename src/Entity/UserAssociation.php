@@ -36,7 +36,7 @@ class UserAssociation implements UserInterface, PasswordAuthenticatedUserInterfa
     #[ORM\Column(length: 50)]
     private ?string $contact = null;
 
-    #[ORM\OneToOne(cascade: ['persist', 'remove'])]
+    #[ORM\OneToOne(cascade: ['persist', 'remove'], fetch: "EAGER")]
     #[ORM\JoinColumn(nullable: false)]
     private ?Association $association = null;
 

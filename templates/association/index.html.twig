@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Association{% endblock %}
+
+{% block body %}
+{{ form_start(form) }}
+    <div class="container association-home">
+        <section class="generic-section">
+            <div class="information">
+                <div class="title">Information</div>
+                <div class="name">{{ association.nom }}</div>
+
+                <div class="divider"></div>
+
+                <div class="info-row">
+                    <span>Presidente :</span>
+                    <span>{{ association.nomPresident }}</span>
+                </div>
+                <div class="info-row">
+                    <span>Contact :</span>
+                    <span>{{ association.contact }}</span>
+                </div>
+                <div class="info-row">
+                    <span>Nombre de membre :</span>
+                    <span>{{ association.nombreMembre }}</span>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="info-row">
+                    <span>Secteur :</span>
+                    <span>{{ association.commune.district.region.nom }} / {{ association.commune.district.nom }} / {{ association.commune.nom }}</span>
+                </div>
+                <div class="info-row">
+                    <span>NIF :</span>
+                    <span>{{ association.nif|default('Aucun') }}</span>
+                </div>
+                <div class="info-row">
+                    <span>STAT :</span>
+                    <span>{{ association.stat|default('Aucun') }}</span>
+                </div>
+                <div class="info-row">
+                    <span>N° Recepissé :</span>
+                    <span>{{ association.numeroRecepisse|default('Aucun') }}</span>
+                </div>
+                <div class="info-row">
+                    <span>Compte bancaire :</span>
+                    <span>{{ association.compteBancaire|default('Aucun') }}</span>
+                </div>
+            </div>
+            <div class="form-container">
+                <div class="title">Projet</div>
+                {{ form_row(form.nom) }}
+                {{ form_row(form.budget) }}
+                {{ form_row(form.description) }}
+                {{ form_row(form.strategie) }}
+            </div>
+            <div class="form-container">
+                <div class="title">Resultat</div>
+                {{ form_row(form.resultat.delaiProduction) }}
+                {{ form_row(form.resultat.nombre) }}
+                {{ form_row(form.resultat.unite) }}
+                {{ form_row(form.resultat.prixUnitaire) }}
+                {{ form_row(form.resultat.explication) }}
+            </div>
+        </section>
+        <section class="details-section">
+            <div class="form-container">
+                <div class="title">Détails</div>
+                {{ form_row(form.details) }}
+            </div>
+        </section>
+    </div>
+    <div class="">
+        <button class="btn" type="submit">Modifier</button>
+    </div>
+{{ form_end(form) }}
+{% endblock %}
+
+

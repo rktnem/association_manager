@@ -1,0 +1,135 @@
+@media screen and (max-width: 768px) {
+    .association-home {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .association-home {
+        display: flex;
+    }
+}
+
+.association-home + div {
+    display: flex;
+    justify-content: end;
+    margin: 24px;
+}
+.association-home + div > button {
+    min-width: 150px;
+}
+.association-home section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 12px;
+    width: 100%;
+}
+.association-home section .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.association-home section .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--gray-medium);
+}
+.association-home section .title::before {
+    display: block;
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary);
+    border-radius: 12px;
+}
+
+.association-home .generic-section .information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+.association-home .generic-section .information .name {
+    font-size: 20px;
+    font-weight: bold;
+}
+.association-home .generic-section .information .info-row span:first-child {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--gray-medium);
+}
+
+.association-home .details-section .form-container > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.association-home .details-section .form-container > div > div button {
+    background-color: var(--gray-medium);
+    align-self: end;
+    max-width: 250px;
+    transition: 0.3s ease;
+}
+.association-home .details-section .form-container > div > div button:hover {
+    background-color: var(--gray-light);
+}
+.association-home .details-section .form-container > div > div > div {
+    position: relative;
+    padding: 8px 16px;
+    background-color: var(--gray-lighter);
+    border-radius: 4px;
+}
+.association-home
+    .details-section
+    .form-container
+    > div
+    > div
+    > div
+    .field-index {
+    display: inline-block;
+    margin: 6px 0;
+    padding: 4px 8px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--gray-medium);
+    border-radius: 100%;
+}
+.association-home
+    .details-section
+    .form-container
+    > div
+    > div
+    > div
+    .field-delete
+    svg {
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    width: 24px;
+    height: auto;
+    padding: 2px;
+    color: var(--gray-medium);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.association-home
+    .details-section
+    .form-container
+    > div
+    > div
+    > div
+    .field-delete
+    svg:hover {
+    background-color: var(--gray-light);
+}
+.association-home .details-section .form-container > div > div > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
