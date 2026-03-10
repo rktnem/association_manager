@@ -16,6 +16,16 @@ class MembreRepository extends ServiceEntityRepository
         parent::__construct($registry, Membre::class);
     }
 
+    public function findAllMembers(int $associationId): array {
+        return $this->createQueryBuilder("m")
+            ->select("m.id", "m.nom", "m.prenom", "m.adresse", "m.role")
+            ->where("m.association = :associationId")
+            ->setParameter("associationId", $associationId)
+            ->getQuery()
+            ->getResult()
+        ;
+    }
+
 //    /**
 //     * @return Membre[] Returns an array of Membre objects
 //     */

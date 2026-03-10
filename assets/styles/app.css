@@ -8,6 +8,8 @@
     --gray-white: hsla(0, 0%, 97%, 1);
     --text-error: hsla(0, 85%, 50%, 1);
     --background-error: hsla(0, 50%, 90%, 1);
+    --blue: hsla(215, 75%, 50%, 1);
+    --red: hsla(0, 85%, 60%, 1);
 }
 
 *::-webkit-scrollbar {

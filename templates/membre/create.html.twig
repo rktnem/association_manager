@@ -1,0 +1,26 @@
+{% extends 'membre/index.html.twig' %}
+
+{% block operation_icon %}
+    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19c0-2.21-2.686-4-6-4s-6 1.79-6 4m16-3v-3m0 0v-3m0 3h-3m3 0h3M9 12a4 4 0 1 1 0-8a4 4 0 0 1 0 8"/>
+    </svg>
+{% endblock %}
+
+{% block member_form %}
+    <div class="header">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2 z M 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4 z M 11 8L11 11L8 11L8 13L11 13L11 16L13 16L13 13L16 13L16 11L13 11L13 8L11 8 z" fill="currentColor" />
+            </svg>
+        </span>
+        <h3>Nouveau membre</h3>
+        <div class="close" {{ stimulus_action("member/member", "display", "click") }}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                <path d="M38.982422 6.9707031 A 2.0002 2.0002 0 0 0 37.585938 7.5859375L24 21.171875L10.414062 7.5859375 A 2.0002 2.0002 0 0 0 8.9785156 6.9804688 A 2.0002 2.0002 0 0 0 7.5859375 10.414062L21.171875 24L7.5859375 37.585938 A 2.0002 2.0002 0 1 0 10.414062 40.414062L24 26.828125L37.585938 40.414062 A 2.0002 2.0002 0 1 0 40.414062 37.585938L26.828125 24L40.414062 10.414062 A 2.0002 2.0002 0 0 0 38.982422 6.9707031 z" fill="currentColor" />
+            </svg>
+        </div>
+    </div>
+    <div class="body">
+        {{ form(form) }}
+    </div>
+{% endblock %}

@@ -21,8 +21,11 @@ import "./styles/auth/login.css";
 import "./styles/auth/register.css";
 
 /**
- * Styles for association section
+ * Styles for association layout
  */
 import "./styles/association/index.css";
 
-console.log("This log comes from assets/app.js - welcome to AssetMapper! 🎉");
+/**
+ * Styles for member layout
+ */
+import "./styles/membre/index.css";

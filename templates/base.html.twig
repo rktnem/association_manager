@@ -13,7 +13,25 @@
     </head>
     <body {{ stimulus_controller("partials/navigation") }}>
         <nav class="navbar">
-            {{ include("/partials/navbar.html.twig") }}
+            {# {{ include("/partials/navbar.html.twig") }} #}
+            <div class="nav-title">
+                <div class="toggle" {{ stimulus_action("partials/navigation", "expand", "click") }}>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M3 5 A 1.0001 1.0001 0 1 0 3 7L21 7 A 1.0001 1.0001 0 1 0 21 5L3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13L21 13 A 1.0001 1.0001 0 1 0 21 11L3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19L21 19 A 1.0001 1.0001 0 1 0 21 17L3 17 z" fill="#252525" />
+                    </svg>
+                </div>
+                <div class="logo">
+                    <img src={{ asset("/images/logo-100px.png") }} alt="Logo">
+                </div>
+                <div class="title">
+                    <b>Association</b>
+                    <span>Manager</span>
+                </div>
+            </div>
+            <div class="nav-item">
+                {% block nav_item %}{% endblock %}
+            </div>
+            <div></div>
         </nav>
         <div class="wrapper">
             <aside class="sidebar" {{ stimulus_target("partials/navigation", "sidebar") }}>

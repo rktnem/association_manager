@@ -1,4 +1,6 @@
 .navbar {
+    display: flex;
+    justify-content: space-between;
     padding: 12px 16px;
 }
 
@@ -27,4 +29,17 @@
 .navbar .nav-title .title span {
     color: var(--gray-medium);
     font-size: 14px;
+}
+
+.navbar .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+}
+.navbar .nav-item .item:hover {
+    transition: 0.2s ease-out;
+}
+.navbar .nav-item .item:hover {
+    color: var(--blue);
 }

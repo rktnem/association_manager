@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\MembreRepository;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: MembreRepository::class)]
@@ -24,6 +25,12 @@ class Membre
 
     #[ORM\ManyToOne(inversedBy: 'membres')]
     private ?Association $association = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $adresse = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTime $birthday = null;
 
     public function getId(): ?int
     {
@@ -74,6 +81,30 @@ class Membre
     public function setAssociation(?Association $association): static
     {
         $this->association = $association;
+
+        return $this;
+    }
+
+    public function getAdresse(): ?string
+    {
+        return $this->adresse;
+    }
+
+    public function setAdresse(string $adresse): static
+    {
+        $this->adresse = $adresse;
+
+        return $this;
+    }
+
+    public function getBirthday(): ?\DateTime
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(\DateTime $birthday): static
+    {
+        $this->birthday = $birthday;
 
         return $this;
     }
